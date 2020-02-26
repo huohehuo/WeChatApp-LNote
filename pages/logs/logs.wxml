@@ -1,0 +1,21 @@
+<!--logs.wxml-->
+
+  <button bindtap="clear_data">清空缓存</button>
+<scroll-view scroll-y="{{true}}" class="scroll-list">
+        <view class="list-box b-line"  wx:for="{{list_data}}" data-id='{{index}}' data-index="{{index}}" wx:item="item" wx:key="index">
+            <view class="list-item" data-index="{{index}}" >
+                <view class="content">
+                    <div class="inner">
+                        <text class="title">{{item}}</text>
+                    </div>
+                </view>
+                <!-- <image src="../../images/logo.png" class="del" bindtap="del"  data-index="{{index}}"/> -->
+            </view>
+        </view>
+</scroll-view>
+
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>

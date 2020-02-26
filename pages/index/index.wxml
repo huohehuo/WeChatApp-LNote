@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  
+  
+  <!-- 跳转方式-->
+  <!-- //当前页面打开 -->
+  <!-- <view>
+      <navigator url="/pages/test/test" hover-class="navigator-hover">跳转页面</navigator>
+  </view> -->
+  <!-- 从首页跳转到日志页面（不可以返回）  去掉redirect可以返回 -->
+  <!-- <view>
+    <navigator  url="/pages/logs/logs" hover-class="changestyle" redirect>页面跳转，无法返回</navigator>
+</view> -->
+<!-- 跳转到某个tab -->
+<!-- <view>
+<navigator url="/pages/logs/logs" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+</view> -->
+
+  <!--mysrc,but_msg都是js中data中定义的属性 -->
+  <!--bindtap可以看作是注册监听事件 -->
+  <!--class是与样式表有关 -->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

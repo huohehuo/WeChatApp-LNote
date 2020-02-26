@@ -1,0 +1,20 @@
+<view>
+    <image bindtap="button" class="show" src="{{mysrc}}" style="width: 100%"></image>
+  <!-- <button bindtap="button" class="button">{{but_msg}}</button> -->
+  <br/>
+  <!-- <button bindtap="checkUrl" class="button">请求网络</button> -->
+  <scroll-view scroll-y="{{true}}" class="scroll-list">
+        <view class="list-box b-line"  wx:for="{{companies}}" data-id='{{index}}' data-index="{{index}}" wx:item="item" wx:key="index" bindtap="item_click">
+            <view class="list-item" data-index="{{index}}" >
+                <view class="content">
+                    <image src="" class="coverImage" src="../../images/logo.png"/>
+                    <div class="inner">
+                        <text class="title">{{item.CompanyName}}</text>
+                        <text class="subtitle">--{{item.AppVersion}}</text>
+                    </div>
+                </view>
+                <!-- <image src="../../images/logo.png" class="del" bindtap="del"  data-index="{{index}}"/> -->
+            </view>
+        </view>
+</scroll-view>
+</view>
