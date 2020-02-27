@@ -25,7 +25,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",
 	"appid": "wx1f0a73ab9e79bcc2",
-	"projectname": "TestScan",
+	"projectname": "LNote",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

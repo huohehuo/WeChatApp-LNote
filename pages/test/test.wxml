@@ -1,5 +1,15 @@
 <view>
-    <image bindtap="button" class="show" src="{{mysrc}}" style="width: 100%"></image>
+    <image bindtap="button" class="show" src="{{mysrc}}" style="width: 100%;height:50px"></image>
+  <button bindtap="getCode">扫码</button>
+  <text>{{codeback}}</text>
+  <view class="weui-cells__title">可以自动聚焦的input: {{inputValue}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus bindinput="bindKeyInput" placeholder="将会获取焦点" style="width: 100%;height:50px"/>
+        <input class="weui-input" bindinput="bindKeyInput2" placeholder="appid" style="width: 100%;height:50px"/>
+      </view>
+    </view>
+    <button bindtap="AddCompany">添加数据</button><button bindtap="DelCompany">删除数据</button>
   <!-- <button bindtap="button" class="button">{{but_msg}}</button> -->
   <br/>
   <!-- <button bindtap="checkUrl" class="button">请求网络</button> -->

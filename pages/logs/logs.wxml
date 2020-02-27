@@ -1,5 +1,7 @@
 <!--logs.wxml-->
-
+    <view>
+    <navigator  url="/pages/login/login" hover-class="changestyle" redirect>返回登录界面</navigator>
+</view>
   <button bindtap="clear_data">清空缓存</button>
 <scroll-view scroll-y="{{true}}" class="scroll-list">
         <view class="list-box b-line"  wx:for="{{list_data}}" data-id='{{index}}' data-index="{{index}}" wx:item="item" wx:key="index">
